@@ -9,8 +9,8 @@ public class VirtualPetShelterApp {
 
 		VirtualPetShelter myShelter = new VirtualPetShelter();
 		VirtualPet pet1 = new VirtualPet("Freddy", "cat", 5, 5, 5);
-		VirtualPet pet2 = new VirtualPet("Jason", "gerbil", 5, 5, 5);
-		VirtualPet pet3 = new VirtualPet("Michael", "velociraptor", 5, 5, 5);
+		VirtualPet pet2 = new VirtualPet("Michael", "gerbil", 5, 5, 5);
+		VirtualPet pet3 = new VirtualPet("Jason", "velociraptor", 5, 5, 5);
 
 		myShelter.takePetIn(pet1);
 		myShelter.takePetIn(pet2);
@@ -82,19 +82,19 @@ public class VirtualPetShelterApp {
 				}
 			} else if (playerResponse.equals("3")) {
 				System.out.println("Please enter the name of the pet you would like to play with.");
-				String petToPlayWith = input.nextLine();
+				String petToPlayWith = input.next();
 				System.out.println("You have selected " + petToPlayWith + ".");
 				myShelter.playWithPet(petToPlayWith);
 			} else if (playerResponse.equals("4")) {
 				System.out.println("Please input new pet's name.");
-				String newPetName = input.nextLine();
+				String newPetName = input.next();
 				System.out.println("Please input new pet's description.");
-				String newPetDescription = input.nextLine();
+				String newPetDescription = input.next();
 				VirtualPet newPet = new VirtualPet(newPetName, newPetDescription);
 				myShelter.takePetIn(newPet);
 			} else if (playerResponse.equals("5")) {
 				System.out.println("Please enter the name of the pet being adopted.");
-				String petBeingAdopted = input.nextLine();
+				String petBeingAdopted = input.next();
 				myShelter.adoptPetOut(petBeingAdopted);
 			} else if (playerResponse.equals("6")) {
 				gameActive = false;
