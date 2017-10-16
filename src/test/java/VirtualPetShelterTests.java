@@ -3,17 +3,18 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class VirtualPetShelterTests {
-	
+
 	@Test
-	public void assertThatGetSizeMethodReturnsOneAfterPetAdded(){
+	public void assertThatGetSizeMethodReturnsOneAfterPetAdded() {
 		VirtualPetShelter underTest = new VirtualPetShelter();
 		VirtualPet testPet = new VirtualPet("bob", "dog");
 		underTest.takePetIn(testPet);
 		int check = underTest.getSize();
 		assertEquals(1, check);
 	}
+
 	@Test
-	public void assertThatGetSizeMethodReturnsOneAfterPetAdopted(){
+	public void assertThatGetSizeMethodReturnsOneAfterPetAdopted() {
 		VirtualPetShelter underTest = new VirtualPetShelter();
 		VirtualPet testPet1 = new VirtualPet("bob", "dog");
 		VirtualPet testPet2 = new VirtualPet("bill", "dog");
@@ -23,8 +24,9 @@ public class VirtualPetShelterTests {
 		int check = underTest.getSize();
 		assertEquals(1, check);
 	}
+
 	@Test
-	public void assertThatPetBoredomReturnsZeroAfterPlay(){
+	public void assertThatPetBoredomReturnsZeroAfterPlay() {
 		VirtualPetShelter underTest = new VirtualPetShelter();
 		VirtualPet testPet1 = new VirtualPet("bob", "dog", 5, 5, 5);
 		underTest.takePetIn(testPet1);
@@ -32,8 +34,9 @@ public class VirtualPetShelterTests {
 		int check = testPet1.getBoredom();
 		assertEquals(0, check);
 	}
+
 	@Test
-	public void assertThatPetsHungerReturnsZeroAfterFeeding(){
+	public void assertThatPetsHungerReturnsZeroAfterFeeding() {
 		VirtualPetShelter underTest = new VirtualPetShelter();
 		VirtualPet testPet1 = new VirtualPet("bob", "dog", 5, 5, 5);
 		VirtualPet testPet2 = new VirtualPet("bill", "dog", 5, 5, 5);
@@ -45,8 +48,9 @@ public class VirtualPetShelterTests {
 		assertEquals(0, check1);
 		assertEquals(0, check2);
 	}
+
 	@Test
-	public void assertThatPetsThirstReturnsZeroAfterFeeding(){
+	public void assertThatPetsThirstReturnsZeroAfterFeeding() {
 		VirtualPetShelter underTest = new VirtualPetShelter();
 		VirtualPet testPet1 = new VirtualPet("bob", "dog", 5, 5, 5);
 		VirtualPet testPet2 = new VirtualPet("bill", "dog", 5, 5, 5);
@@ -58,8 +62,9 @@ public class VirtualPetShelterTests {
 		assertEquals(0, check1);
 		assertEquals(0, check2);
 	}
+
 	@Test
-	public void assertThatAllPetsThirstHungerAndBoredomReturnTwoAfterTick(){
+	public void assertThatAllPetsThirstHungerAndBoredomReturnTwoAfterTick() {
 		VirtualPetShelter underTest = new VirtualPetShelter();
 		VirtualPet testPet1 = new VirtualPet("bob", "dog");
 		VirtualPet testPet2 = new VirtualPet("bill", "dog");

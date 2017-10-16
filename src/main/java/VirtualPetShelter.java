@@ -10,7 +10,7 @@ public class VirtualPetShelter {
 		return shelter.values();
 	}
 
-	//Individual Interactions
+	// Individual Interactions
 	public VirtualPet getPet(String name) {
 		return shelter.get(name);
 	}
@@ -22,35 +22,34 @@ public class VirtualPetShelter {
 	public void adoptPetOut(String name) {
 		shelter.remove(name);
 	}
-	
+
 	public void playWithPet(String name) {
 		VirtualPet selectedPet = shelter.get(name);
 		selectedPet.play();
 	}
-	
-	//Group interactions
+
+	// Group interactions
 	public void feedPets() {
 		for (VirtualPet pet : pets()) {
 			pet.feed();
 		}
 	}
-	
+
 	public void giveWaterToPets() {
 		for (VirtualPet pet : pets()) {
 			pet.giveWater();
 		}
 	}
-	
-	
-	//Tick Method
+
+	// Tick Method
 	public void groupTick() {
 		for (VirtualPet pet : pets()) {
 			pet.tick();
 		}
 	}
-	
-	//Size Getter for testing purposes
-	public int getSize(){
+
+	// Size Getter for testing purposes
+	public int getSize() {
 		return shelter.size();
 	}
 
